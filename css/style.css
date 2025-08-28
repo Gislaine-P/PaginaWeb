@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+  background: url(/images/base.jpg) no-repeat center center fixed ;
+  background-size: cover;
+}
+
+
+.encabezado h1{
+  text-align: center;
+  margin-bottom: 40px;
+  color: #FFFF
+}
+
+/*PRODUCTOS EN ORDEN*/
+.catalogo_productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* OBJETO DONDE ESTAN LOS DATOS DEL PRODUCTO E IMAGEN*/
+.producto {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* TAMAÑO IMAGEN */
+.producto img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+/*TEXTOS DE CUADROS PARA LINK*/
+.producto_link{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+  
