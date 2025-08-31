@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pressé Beauty</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<style>
+  /* Para evitar srcoll y margen de la pagina */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    /* No scroll */
+    font-family: Arial, sans-serif;
+    background: url(/images/base.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  /* navbar fijo */
+  nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    /* Altura navbar*/
+    z-index: 1030;
+  }
+
+  body {
+    padding-top: 56px;
+    /* espacio para navbar */
+  }
+
+  .carousel,
+  .carousel-inner,
+  .carousel-item {
+    height: calc(100vh - 56px);
+    /* Edita toda la pantalla menos la navbar */
+    max-height: calc(100vh - 56px);
+    overflow: hidden;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+
+  }
+</style>
+
+<body>
+
+  <!-- NAVBAR, base de arriba con menu  -->
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+        Pressé Beauty
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- NAVBAR MENU -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+  
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preguntas</a>
+            </li>
+          </ul>
+
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" />
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+
+          <div class="border-top pt-3 mt-3">
+            <p class="text-muted mb-1"><strong>Mi cuenta</strong></p>
+            <a href="login.html" class="nav-link">Iniciar sesión</a>
+            <a href="registro.html" class="nav-link">Registrarse</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CAROUSEL DE IMAGENES INICIO -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/inicio3.jpg" class="d-block w-100" alt="Uñas 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/inicio2.jpg" class="d-block w-100" alt="Uñas 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/inicio1.jpg" class="d-block w-100" alt="Uñas 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+  <!--SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
