@@ -1,17 +1,10 @@
-body{
+body.html-cuerpo{
   margin: 0;
   padding: 40px 20px 20px 20px;
   background: url(/images/base.jpg) no-repeat center center fixed ;
   background-size: cover;
 }
 
-.encabezado h1{
-  text-align: center;
-  margin-bottom: 40px;
-  color: #FFFF
-}
-
-/*PRODUCTOS EN ORDEN*/
 .catalogo_productos{
     display: flex;
     flex-wrap: wrap;
@@ -20,32 +13,73 @@ body{
     padding: 40px;
 }
 
-/* OBJETO DONDE ESTAN LOS DATOS DEL PRODUCTO E IMAGEN*/
 .producto {
   width: 300px;
   padding: 20px;
   background: white;
-  border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   text-align: center;
   cursor: pointer;
-}
-
-/* TAMAÑO IMAGEN */
-.producto img {
-  width: 100%;
-  border-radius: 16px;
-  margin-bottom: 20px;
-}
-
-/*TEXTOS DE CUADROS PARA LINK*/
-.producto_link{
   text-decoration: none;
   color: inherit;
   display: block;
 }
 
-.imagen{
-  width: 100px;
+.producto img {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
+
+
+
+
+html.inicio-html,
+body.inicio-body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Solo oculta scroll horizontal */
+  font-family: Arial, sans-serif;
+  background: url(/images/base.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.inicio-body {
+  padding-top: 56px;
+}
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  z-index: 1030;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: calc(100vh - 56px);
+  max-height: calc(100vh - 56px);
+}
+
+.carousel-item {
+  background-color: #000; /* Fondo para evitar espacios blancos al cargar */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-button-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1050; /* encima del carrusel */
+text-align: center;
 }

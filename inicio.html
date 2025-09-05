@@ -1,67 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="inicio-html">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pressé Beauty</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet"/>
 </head>
 
-<style>
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    overflow-x: hidden; /* Solo oculta scroll horizontal */
-    font-family: Arial, sans-serif;
-    background: url(/images/base.jpg) no-repeat center center fixed;
-    background-size: cover;
-  }
-
-  nav.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 56px;
-    z-index: 1030;
-  }
-
-  body {
-    padding-top: 56px;
-  }
-
-  .carousel,
-  .carousel-inner,
-  .carousel-item {
-    height: calc(100vh - 56px);
-    max-height: calc(100vh - 56px);
-  }
-
-  .carousel-item {
-    background-color: #000; /* Fondo para evitar espacios blancos al cargar */
-  }
-
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-
-  .carousel-button-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1050; /* encima del carrusel */
-  text-align: center;
-}
-</style>
-
-<body>
+<body class="inicio-body">
 
   <!-- NAVBAR -->
   <nav class="navbar bg-body-tertiary fixed-top">
