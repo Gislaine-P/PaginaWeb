@@ -2,89 +2,193 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pressé Beauty</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo - Pressé Beauty</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet"/>
-
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
-
 
 <body class="html-cuerpo">
 
-    
-    <div class="catalogo_productos">
-            <div class="producto" onclick="verProducto(1)">
-                <img src="https://i.pinimg.com/1200x/4e/7f/c8/4e7fc89f546e21ef6231f13b5f491f6e.jpg">
-                <h4>Uñas press on</h4>
-                <p>Uñas de conejo rosadas</p>
-                <p><strong>$20.00</strong></p>
-            </div>
+  <!-- NAVBAR -->
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid justify-content-between">
+      <a class="navbar-brand mx-auto mx-md-0 d-flex align-items-center" href="inicio.html">
+        Pressé Beauty
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <!-- NAVBAR MENU -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
 
-            <div class="producto" onclick="verProducto(2)">
-                <img src="https://i.pinimg.com/1200x/58/2c/fe/582cfef6ba64da56775eced8189ba2e1.jpg">
-                <h4>Uñas press on</h4>
-                <p>Uñas de conejo rosadas</p>
-                <p><strong>$20.00</strong></p>
-            </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nosotras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preguntas</a>
+            </li>
+          </ul>
 
-            <div class="producto" onclick="verProducto(3)">
-                <img
-                    src="https://img.kwcdn.com/product/fancy/407abcef-b7ff-4ddb-b981-506c00ee6716.jpg?imageView2/2/w/800/q/70">
-                <h4>Uñas press on</h4>
-                <p>Uñas de conejo rosadas</p>
-                <p><strong>$20.00</strong></p>
-            </div>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" />
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
 
-            <div class="producto" onclick="verProducto(4)">
-                <img src="https://i.pinimg.com/736x/21/9e/a9/219ea9589d25eed07e6fde99bf0ad195.jpg">
-                <h4>Uñas press on</h4>
-                <p>Uñas de conejo rosadas</p>
-                <p><strong>$20.00</strong></p>
-            </div>
-
-            <div class="producto" onclick="verProducto(5)">
-                <img src="https://i.pinimg.com/1200x/7c/8e/3a/7c8e3a6eebfe6588cd22feba82d86d43.jpg">
-                <h4>Uñas press on</h4>
-                <p>Uñas de conejo rosadas</p>
-                <p><strong>$20.00</strong></p>
-            </div>
-
-            <div class="producto" onclick="verProducto(6)">
-                <img src="https://i.pinimg.com/736x/30/36/fa/3036fa653b5f90655bae071a6915d5f1.jpg">
-                <h4>Uñas press on</h4>
-                <p>Uñas de conejo rosadas</p>
-                <p><strong>$20.00</strong></p>
-            </div>
-
-            <div class="producto" onclick="verProducto(7)">
-                <img src="https://i.pinimg.com/736x/f2/98/3d/f2983d13d546f7d24384c18ca4325263.jpg">
-                <h4>Uñas press on</h4>
-                <p>Uñas de conejo rosadas</p>
-                <p><strong>$20.00</strong></p>
-            </div>
-
-            <div class="producto" onclick="verProducto(8)">
-                <img src="https://i.pinimg.com/736x/c8/ef/6b/c8ef6b56c2d9ab93e54bd6bff9328a4e.jpg">
-                <h4>Uñas press on</h4>
-                <p>Uñas de conejo rosadas</p>
-                <p><strong>$20.00</strong></p>
-            </div>
-
+          <div class="border-top pt-3 mt-3">
+            <p class="text-muted mb-1"><strong>Mi cuenta</strong></p>
+            <a href="login.html" class="nav-link">Iniciar sesión</a>
+            <a href="registro.html" class="nav-link">Registrarse</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </nav>
 
 
+  <!--ENCABEZADO DE CATÁLOGO -->
+  <header class="container text-center py-5 mt-5">
+    <h1 class="display-5 fw-bold">Catálogo de Uñas Press-On</h1>
+    <p class="lead text-muted">Explora nuestra colección y elige tu estilo favorito</p>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <input type="text" class="form-control form-control-lg" placeholder="Buscar un diseño...">
+      </div>
+    </div>
+  </header>
 
+  <!--CATÁLOGO DE PRODUCTOS -->
+  <div class="container pb-5">
+    <div class="row g-4">
 
+      <!-- Producto 1 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="verProducto(1)" style="cursor: pointer;">
+          <img src="https://i.pinimg.com/1200x/4e/7f/c8/4e7fc89f546e21ef6231f13b5f491f6e.jpg" class="card-img-top rounded-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Uñas press on</h5>
+            <p class="card-text text-muted">Uñas de conejo rosadas</p>
+            <p class="fw-bold">$20.00</p>
+          </div>
+        </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+      <!-- Producto 2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="verProducto(2)" style="cursor: pointer;">
+          <img src="https://i.pinimg.com/1200x/58/2c/fe/582cfef6ba64da56775eced8189ba2e1.jpg" class="card-img-top rounded-top" alt="Producto 2">
+          <div class="card-body">
+            <h5 class="card-title">Uñas press on</h5>
+            <p class="card-text text-muted">Uñas de conejo rosadas</p>
+            <p class="fw-bold">$20.00</p>
+          </div>
+        </div>
+      </div>
 
-    <script src="js/catalogo.js"></script>
+      <!-- Producto 3 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="verProducto(3)" style="cursor: pointer;">
+          <img src="https://img.kwcdn.com/product/fancy/407abcef-b7ff-4ddb-b981-506c00ee6716.jpg?imageView2/2/w/800/q/70" class="card-img-top rounded-top" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title">Uñas press on</h5>
+            <p class="card-text text-muted">Uñas de conejo rosadas</p>
+            <p class="fw-bold">$20.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="verProducto(4)" style="cursor: pointer;">
+          <img src="https://i.pinimg.com/736x/21/9e/a9/219ea9589d25eed07e6fde99bf0ad195.jpg" class="card-img-top rounded-top" alt="Producto 4">
+          <div class="card-body">
+            <h5 class="card-title">Uñas press on</h5>
+            <p class="card-text text-muted">Uñas de conejo rosadas</p>
+            <p class="fw-bold">$20.00</p>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 5 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="verProducto(5)" style="cursor: pointer;">
+          <img src="https://i.pinimg.com/1200x/7c/8e/3a/7c8e3a6eebfe6588cd22feba82d86d43.jpg" class="card-img-top rounded-top" alt="Producto 5">
+          <div class="card-body">
+            <h5 class="card-title">Uñas press on</h5>
+            <p class="card-text text-muted">Uñas de conejo rosadas</p>
+            <p class="fw-bold">$20.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="verProducto(6)" style="cursor: pointer;">
+          <img src="https://i.pinimg.com/736x/30/36/fa/3036fa653b5f90655bae071a6915d5f1.jpg" class="card-img-top rounded-top" alt="Producto 6">
+          <div class="card-body">
+            <h5 class="card-title">Uñas press on</h5>
+            <p class="card-text text-muted">Uñas de conejo rosadas</p>
+            <p class="fw-bold">$20.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="verProducto(7)" style="cursor: pointer;">
+          <img src="https://i.pinimg.com/736x/f2/98/3d/f2983d13d546f7d24384c18ca4325263.jpg" class="card-img-top rounded-top" alt="Producto 7">
+          <div class="card-body">
+            <h5 class="card-title">Uñas press on</h5>
+            <p class="card-text text-muted">Uñas de conejo rosadas</p>
+            <p class="fw-bold">$20.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="verProducto(8)" style="cursor: pointer;">
+          <img src="https://i.pinimg.com/736x/c8/ef/6b/c8ef6b56c2d9ab93e54bd6bff9328a4e.jpg" class="card-img-top rounded-top" alt="Producto 8">
+          <div class="card-body">
+            <h5 class="card-title">Uñas press on</h5>
+            <p class="card-text text-muted">Uñas de conejo rosadas</p>
+            <p class="fw-bold">$20.00</p>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- Fin row -->
+  </div> <!-- Fin container catálogo -->
+
+  <!--FOOTER -->
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-1">© 2025 Pressé Beauty. Todos los derechos reservados.</p>
+      <small class="text-muted">Sitio creado con ❤️ y Bootstrap 5</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+  </script>
+  <script src="js/catalogo.js"></script>
+
 </body>
-
 </html>
