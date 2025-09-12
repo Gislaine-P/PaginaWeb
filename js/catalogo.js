@@ -1,87 +1,46 @@
-const productos = [
-
-    {   id: 1,
-        nombre: "Uñas Press On",
-        descripcion: "Uñas Press On",
-        imagen: "https://i.pinimg.com/1200x/4e/7f/c8/4e7fc89f546e21ef6231f13b5f491f6e.jpg",
-        precio: "20.00"
-
-    },
-    {   id: 2,
-        nombre: "Uñas Press On",
-        descripcion: "Uñas Press On",
-        imagen: "https://i.pinimg.com/1200x/58/2c/fe/582cfef6ba64da56775eced8189ba2e1.jpg",
-        precio: "20.00"
-
-    },
-    {   id: 3,
-        nombre: "Uñas Press On",
-        descripcion: "Uñas Press On",
-        imagen: "https://img.kwcdn.com/product/fancy/407abcef-b7ff-4ddb-b981-506c00ee6716.jpg?imageView2/2/w/800/q/70",
-        precio: "20.00"
-
-    },
-    {   id: 4,
-        nombre: "Uñas Press On",
-        descripcion: "Uñas Press On",
-        imagen: "https://i.pinimg.com/736x/21/9e/a9/219ea9589d25eed07e6fde99bf0ad195.jpg",
-        precio: "20.00"
-
-    },
-    {   id: 5,
-        nombre: "Uñas Press On",
-        descripcion: "Uñas Press On",
-        imagen: "https://i.pinimg.com/1200x/7c/8e/3a/7c8e3a6eebfe6588cd22feba82d86d43.jpg",
-        precio: "20.00"
-
-    },
-    {   id: 6,
-        nombre: "Uñas Press On",
-        descripcion: "Uñas Press On",
-        imagen: "https://i.pinimg.com/736x/30/36/fa/3036fa653b5f90655bae071a6915d5f1.jpg",
-        precio: "20.00"
-
-    },
-    {   id: 7,
-        nombre: "Uñas Press On",
-        descripcion: "Uñas Press On",
-        imagen: "https://i.pinimg.com/736x/f2/98/3d/f2983d13d546f7d24384c18ca4325263.jpg",
-        precio: "20.00"
-
-    },
-    {   id: 8,
-        nombre: "Uñas Press On",
-        descripcion: "Uñas Press On",
-        imagen: "https://i.pinimg.com/736x/c8/ef/6b/c8ef6b56c2d9ab93e54bd6bff9328a4e.jpg",
-        precio: "20.00"
-
-    }
-];
-
-function verProducto(id){
-    const producto = productos.find(p => p.id === id);
-    if(producto){
-        localStorage.setItem("productoSelect", JSON.stringify(producto));
-        window.location.href = "producto.html";
-    }else{
-        alert("Producto no encontrado");
-    }
+// Función para ver el producto seleccionado
+function verProducto(id) {
+  // Guardar el ID del producto seleccionado en localStorage
+  localStorage.setItem("productoSeleccionado", id);
+  
+  // Redirigir a la página de detalle del producto
+  window.location.href = "producto.html";
 }
 
+// Carga y renderiza productos
+document.addEventListener("DOMContentLoaded", () => {
+  const contenedor = document.querySelector(".row.g-4");
 
-window.onload = function () {
-    const contenedor = document.getElementById("productos");
+  // Obtener los productos desde localStorage
+  let productos = JSON.parse(localStorage.getItem("productos")) || [];
 
-    productos.forEach(producto => {
-        const div = document.createElement("div");
-        div.innerHTML = `
-            <img src="${producto.imagen}" alt="${producto.nombre}" width="150">
-            <h3>${producto.nombre}</h3>
-            <p>${producto.descripcion}</p>
-            <p>Precio: $${producto.precio}</p>
-            <button onclick="verProducto(${producto.id})">Ver Producto</button>
-            <hr>
-        `;
-        contenedor.appendChild(div);
-    });
-};
+  // Si no hay productos, mostrar mensaje
+  if (productos.length === 0) {
+    contenedor.innerHTML = `
+      <div class="col-12 text-center">
+        <p class="text-muted">No hay productos en el catálogo por el momento.</p>
+      </div>
+    `;
+    return;
+  }
+
+  // Limpiar contenedor
+  contenedor.innerHTML = "";
+
+  // Renderizar productos
+  productos.forEach((producto, index) => {
+    const card = document.createElement("div");
+    card.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+    card.innerHTML = `
+      <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="verProducto(${producto.id})" style="cursor: pointer;">
+        <img src="${producto.imagen}" class="card-img-top rounded-top" alt="Producto ${index + 1}">
+        <div class="card-body">
+          <h5 class="card-title">${producto.nombre}</h5>
+          <p class="card-text text-muted">${producto.descripcion}</p>
+          <p class="fw-bold">$${producto.precio}</p>
+        </div>
+      </div>
+    `;
+    contenedor.appendChild(card);
+  });
+});

@@ -1,92 +1,3 @@
-body.html-cuerpo{
-  /*margin: 0;
-  padding: 40px 20px 20px 20px;*/
-  background: url(/images/base.jpg) no-repeat center center fixed ;
-  background-size: cover;
-}
-
-.catalogo_productos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 40px;
-}
-
-.producto {
-  width: 300px;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.producto img {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-
-
-
-
-html.inicio-html,
-body.inicio-body {
-  height: 100%;
-  margin: 0;
-  overflow-x: hidden; /* Solo oculta scroll horizontal */
-  font-family: Arial, sans-serif;
-  background: url(/images/base.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-
-body.inicio-body {
-  padding-top: 56px;
-}
-
-nav.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 56px;
-  z-index: 1030;
-}
-
-/* Altura completa menos el navbar fijo */
-.carousel,
-.carousel-inner,
-.carousel-item {
-  height: calc(100vh - 56px);  /* 100% de la pantalla menos navbar */
-  max-height: calc(100vh - 90px);
-}
-
-/* Asegura que las imágenes cubran todo el carrusel */
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cubre sin deformar */
-  display: block;
-}
-
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 768px) {
-  .carousel,
-  .carousel-inner,
-  .carousel-item {
-    height: 60vh;
-    max-height: 60vh;
-  }
-}
-
-
-/*THAIS*/
-
-
 body.fondologin,
 body.Perf,
 body.regis,
@@ -94,7 +5,8 @@ body.dash,
 body.agregarusuario,
 body.html-cuerpo,
 body.html-cuerpo-2,
-body.editar{
+body.editar
+body.html-cuerpo{
   font-family: Arial, sans-serif;
   background: url("../Images/Fondologin.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -306,4 +218,65 @@ h1 {
 
 .modal-footer {
   border-top: none;
+}
+
+
+
+.catalogo_productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.producto {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.producto img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  z-index: 1030;
+}
+
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: calc(100vh - 56px); 
+  max-height: calc(100vh - 90px);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .carousel,
+  .carousel-inner,
+  .carousel-item {
+    height: 60vh;
+    max-height: 60vh;
+  }
 }
