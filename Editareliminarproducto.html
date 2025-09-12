@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestión de Productos - Pressé Beauty</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="Styles/styles.css" rel="stylesheet" />
+</head>
+
+<body class="html-cuerpo-2">
+
+  <header class="container text-center py-5 mt-5">
+    <h1 class="display-5 fw-bold">Gestión de Productos</h1>
+    <p class="lead text-muted">Aquí puedes editar o eliminar productos del catálogo</p>
+    
+    <!-- Botón volver al Dashboard -->
+    <a href="Dashboard.html" class="btn btn-azul mt-3">
+      ⬅ Volver al Dashboard
+    </a>
+  </header>
+
+  <div class="container my-5">
+    <h3 class="mb-4">Lista de productos</h3>
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MODAL EDITAR -->
+  <div class="modal fade" id="modalEditar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title">Editar producto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formEditar">
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="editNombre">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Descripción</label>
+              <textarea class="form-control" id="editDescripcion"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Precio</label>
+              <input type="number" class="form-control" id="editPrecio">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Imagen (URL)</label>
+              <input type="text" class="form-control" id="editImagen">
+            </div>
+            <button type="submit" class="btn btn-success">Guardar cambios</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ELIMINAR -->
+  <div class="modal fade" id="modalEliminar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">Eliminar producto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>¿Estás seguro que deseas eliminar <strong id="nombreEliminar"></strong>?</p>
+          <button type="button" class="btn btn-danger" id="confirmarEliminar">Sí, eliminar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-1">© 2025 Pressé Beauty. Todos los derechos reservados.</p>
+      <small class="text-muted">Sitio creado con ❤️ y Bootstrap 5</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS de gestión de productos -->
+  <script src="Editareliminarprodu.js"></script>
+
+</body>
+</html>
